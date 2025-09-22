@@ -1,4 +1,4 @@
-name: q3ntu 0.0.7
+name: q3ntu 0.0.8
 
 on:
   workflow_dispatch:
@@ -11,7 +11,7 @@ jobs:
       - name: Run container
         run: |
           docker run -d \
-          -e BOOT="kali" \
+          -e BOOT="ubuntu" \
           --name=w1n \
           --cap-add=NET_ADMIN \
           --security-opt seccomp=unconfined `#optional` \
