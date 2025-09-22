@@ -13,10 +13,9 @@ jobs:
           docker run -d \
           --name=kali-linux \
           -e PUID=1000 \
-          -e TITLE="Kali Linux" 
+          -e TITLE="Kali Linux" \
           -e PGID=1000 \
           -e TZ=Etc/UTC \
-          -e CHROME_CLI=https://www.linuxserver.io/ `#optional` \
           -p 3000:3000 \
           -p 3001:3001 \
           -v /config:/config \
