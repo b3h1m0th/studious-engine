@@ -21,7 +21,7 @@ jobs:
           pip3 install opencv-python
           sudo apt-get install -y -qq xvfb qtbase5-dev qt5-qmake libgtk2.0-0 liblzf1 libtpms0 libvpx9 libxcb-cursor0 libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-render-util0 libxcb-shape0 libxcb-xkb1 libxkbcommon-x11-0
           
-       -name: Start Xvfb
+      - name: Start Xvfb
         run: |
           Xvfb :99 -screen 0 1024x768x24 &
           export DISPLAY=:99
