@@ -22,4 +22,4 @@ jobs:
           git commit -m "Add Hide.me-Setup-4.3.1.exe"
           git push origin HEAD
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT }}
