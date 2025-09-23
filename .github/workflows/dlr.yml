@@ -12,7 +12,7 @@ jobs:
 
       - name: Download Hide.me Installer
         run: |
-          curl -L "https://hide.me/downloads/Hide.me-Setup-4.3.1.exe" -o downloads/Hide.me-Setup-4.3.1.exe
+          curl -L "https://hide.me/downloads/Hide.me-Setup-4.3.1.exe"
 
       - name: Commit and push file to repository
         run: |
