@@ -1,0 +1,25 @@
+name: Upload Hide.me Installer to Repository
+
+on:
+  workflow_dispatch:
+
+jobs:
+  upload_asset:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download Hide.me Installer
+        run: |
+          curl -L "https://hide.me/downloads/Hide.me-Setup-4.3.1.exe" -o downloads/Hide.me-Setup-4.3.1.exe
+
+      - name: Commit and push file to repository
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add downloads/Hide.me-Setup-4.3.1.exe
+          git commit -m "Add Hide.me-Setup-4.3.1.exe"
+          git push origin HEAD
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT }}
